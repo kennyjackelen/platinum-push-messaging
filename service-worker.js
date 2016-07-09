@@ -106,13 +106,8 @@ var notify = function(data) {
       detail.icon = iconUrl.href;
     }
 
-    return getVisible(clickUrl).then(function(visibleClient) {
-      if (visibleClient) {
-        messageClient(visibleClient, message, false);
-      } else {
-        return self.registration.showNotification(detail.title, detail);
-      }
-    });
+    return self.registration.showNotification(detail.title, detail);
+
   });
 };
 

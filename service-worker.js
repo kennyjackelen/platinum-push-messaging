@@ -87,6 +87,7 @@ var notify = function(data) {
       body: message.message || options.message || '',
       tag: message.tag || options.tag || DEFAULT_TAG,
       icon: absUrl(message.icon || options.iconUrl),
+      badge: absUrl(message.badge),
       sound: absUrl(message.sound || options.sound),
       data: message
     };

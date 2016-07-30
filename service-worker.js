@@ -115,6 +115,9 @@ var notify = function(data) {
 var clickHandler = function(notification) {
   notification.close();
 
+  // for right now, we don't need any action on click
+  return;
+
   var message;
   if ('data' in notification) {
     message = notification.data;
